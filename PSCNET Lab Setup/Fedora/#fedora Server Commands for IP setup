@@ -1,0 +1,19 @@
+#fedora Server Commands for IP setup
+
+nmcli connection modify eth0 ipv4.addresses 172.1.0.15/24
+
+nmcli connection modify eth0 ipv4.gateway 172.1.0.1
+
+nmcli connection modify eth0 ipv4.method manual
+
+nmcli connection up eth0
+
+nmcli device show
+
+ip address show
+
+grubby --update-kernel ALL --args ipv6.disable=1
+
+nmcli connection modify eth0 ipv4.dns 172.1.0.15
+
+nmcli connection modify eth0 ipv4.dns-search pscfedsvr001.local dns.google.com

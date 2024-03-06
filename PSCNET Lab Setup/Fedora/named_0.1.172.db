@@ -1,0 +1,16 @@
+/var/named/0.1.172.db
+
+$TTL 86400
+@   IN  SOA     pscfedsvr001.pscnet.home. root.pscnet.home. (
+        2024030501  ;Serial
+        3600        ;Refresh
+        1800        ;Retry
+        604800      ;Expire
+        86400       ;Minimum TTL
+)
+        # define Name Server
+        IN  NS      pscfedsvr001.pscnet.home.
+
+# define each hostname of an IP address
+30      IN  PTR     pscfedsvr001.pscnet.home.
+31      IN  PTR     www.pscnet.home.
